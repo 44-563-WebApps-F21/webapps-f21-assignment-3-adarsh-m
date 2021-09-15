@@ -29,7 +29,7 @@
             <li>Take the connecting flights and go to Goa</li>
             <li>There can be option of booking direct flight</li>
         </ol>
-        <li>From Panjim airport departures, book a cab to reach Baga Beach stay</li>  
+        <li>From Panjim airport departures, book a cab to reach Baga Beach stay</li>
         <ul>
             <li>Some foods/ drinks that must be tried</li>
             <ul>
@@ -37,7 +37,7 @@
                 <li>Fish</li>
                 <li>Panjim favorites in Fat Fish Restaurant</li>
             </ul>
-        </ul>  
+        </ul>
     </ol>
     <a href="aboutme.html">My Hero</a>
     <hr>
@@ -67,6 +67,23 @@
             <td>8.2$</td>
         </tr>
     </table>
+    <hr>
+    <h3>DATA STRUCTURES</h3>
+    <blockquote cite="https://www.geeksforgeeks.org/sparse-table/">
+        Sparse table concept is used for fast queries on a set of static data (elements do not change).
+        It does preprocessing so that the queries can be answered efficiently.
+    </blockquote>
+    <a href="https://cp-algorithms.com/data_structures/sparse-table.html">Link to DS Sparse Table Algorithm</a>
+    <pre>
+        for (int i = 0; i < N; i++)
+            st[i][0] = f(array[i]);
+
+        for (int j = 1; j <= K; j++)
+            for (int i = 0; i + (1 << j) <= N; i++)
+                st[i][j] = f(st[i][j-1], st[i + (1 << (j - 1))][j - 1]);
+    </pre>
+
+
 </body>
 
 </html>
